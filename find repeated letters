@@ -1,0 +1,17 @@
+def find_repeated_letters(word):
+    from collections import Counter
+    word = word.upper()
+    frequency = Counter(word)
+    repeated_letters = [char for char, count in frequency.items() if count > 1]
+    
+    return len(repeated_letters), repeated_letters
+
+if __name__ == "__main__":
+    word = input("Enter the word: ")
+    num_repeated, letters = find_repeated_letters(word)
+    
+    print(f"Number of repeated letters = {num_repeated}")
+    if num_repeated > 0:
+        print(f"Repeated letters = {', '.join(letters)}")
+    else:
+        print("No repeated letters.")
