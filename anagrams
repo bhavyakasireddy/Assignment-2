@@ -1,0 +1,15 @@
+def group_anagrams(strs):
+    from collections import defaultdict
+    anagrams = defaultdict(list)
+    
+    for s in strs:
+        sorted_str = ''.join(sorted(s))
+        anagrams[sorted_str].append(s)
+    return list(anagrams.values())
+
+if __name__ == "__main__":
+    strs = input("Enter the list of strings (comma-separated): ").split(',')
+    # Remove extra spaces from each string if necessary
+    strs = [s.strip() for s in strs]
+    grouped_anagrams = group_anagrams(strs)
+    print(grouped_anagrams)
