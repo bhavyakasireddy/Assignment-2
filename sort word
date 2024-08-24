@@ -1,0 +1,16 @@
+def sort_word(word):
+    chars = list(word)
+    sorted_chars = sorted(chars)
+    reverse_sorted_chars = sorted(chars, reverse=True)
+    
+    normal_order = ' '.join(sorted_chars)
+    reverse_order = ' '.join(reverse_sorted_chars)
+    
+    return normal_order, reverse_order
+
+if __name__ == "__main__":
+    word = input("Enter the word: ").upper()  
+    normal_order, reverse_order = sort_word(word)
+    
+    print(f"Alphabetical Order Normal: {normal_order}")
+    print(f"Alphabetical Order Reverse: {reverse_order}")
