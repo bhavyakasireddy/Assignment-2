@@ -1,0 +1,7 @@
+def count_matching_indices(str1, str2):
+    return sum(1 for a, b in zip(str1, str2) if a == b)
+
+str1 = input("Enter the first string: ")
+str2 = input("Enter the second string: ")
+matches = count_matching_indices(str1, str2)
+print(f"Number of matches: {matches}")
