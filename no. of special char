@@ -1,0 +1,5 @@
+def count_special_characters(statement):
+    return sum(not char.isalnum() and not char.isspace() for char in statement)
+
+statement = input("Given statement: ")
+print(f"Number of special Characters: {count_special_characters(statement)}")
