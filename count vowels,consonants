@@ -1,0 +1,18 @@
+def count_vowels_and_consonants(statement):
+    vowels = "aeiouAEIOU"
+    num_vowels = sum(1 for char in statement if char in vowels)
+    num_consonants = sum(1 for char in statement if char.isalpha() and char not in vowels)
+    return num_vowels, num_consonants
+
+statement = input("Given statement: ")
+num_vowels, num_consonants = count_vowels_and_consonants(statement)
+
+print(f"Number of vowels = {num_vowels}")
+print(f"Number of consonants = {num_consonants}")
+
+if num_vowels > num_consonants:
+    print("Vowels are more than consonants.")
+elif num_consonants > num_vowels:
+    print("Consonants are more than vowels.")
+else:
+    print("Vowels and consonants are equal.")
